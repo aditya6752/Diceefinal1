@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/newbackground"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="222dp"
+
+        android:layout_height="116dp"
+
+
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/image_rightDice"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_rightlogo"
+        app:layout_constraintStart_toStartOf="@+id/guidelineleftlogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dicee_logo" />
+
+    <ImageView
+        android:id="@+id/image_leftDice"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/image_rightDice"
+        app:layout_constraintStart_toStartOf="@+id/guidelineleftlogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.558"
+        app:srcCompat="@drawable/dice2" />
+
+    <ImageView
+        android:id="@+id/image_rightDice"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_rightlogo"
+        app:layout_constraintLeft_toRightOf="@+id/image_leftDice"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.558"
+        app:srcCompat="@drawable/dice1" />
+
+    <Button
+        android:id="@+id/rollButton"
+
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_backgroundnew"
+        android:contentDescription="@string/description_button"
+        android:text="@string/roll_button_text"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="155dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_rightlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="395dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineleftlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
